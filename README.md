@@ -69,7 +69,6 @@ The fields accept multiline content, but pressing Enter triggers Find Next; use 
 
 ## Troubleshooting
 
-- **No matches for `^` or `$`:** confirm regex is enabled; this was fixed in v0.3.2.
 - **No results in Selected text:** select text in the editor, then reset the scope if needed.
 - **Unexpected regex error:** verify JavaScript syntax, not Perl-only features.
 - **No matching files:** check the scope, file filter and open workspace.
@@ -84,7 +83,7 @@ The extension works locally through VS Code's document and filesystem APIs. It d
 
 ## Source, Maintenance And Licence
 
-The VSIX includes the extension's JavaScript source (`extension.js`, `multi.js`, `regex.js`) and documentation. The separate source archive contains tests and rebuilding instructions. You do not need Git to maintain local versioned releases.
+The VSIX includes the extension's JavaScript source (`extension.js`, `multi.js`, `regex.js`) and documentation. The repository contains tests and rebuilding instructions. You do not need Git to maintain local versioned releases.
 
 MIT licence. See `LICENSE` and `CHANGELOG.md`. The publisher identity is currently a local development placeholder and must be confirmed before publication.
 
@@ -94,4 +93,8 @@ On the **Find** tab, select **List Lines** to capture one result for each matchi
 
 ## Support And Feedback
 
-Before public release, the publisher must provide a support channel for reproducible bug reports. Include the VS Code version, extension version, search scope, anonymised sample text, expected result and actual result. Do not submit confidential document contents.
+Report reproducible bugs using [GitHub Issues](https://github.com/Steadyhands/find-replace-dock/issues). Include the VS Code version, extension version, search scope, anonymised sample text, expected result and actual result. Do not submit confidential document contents.
+
+## Development And Testing
+
+Run `npm test` to execute the regex regression tests and `npm run check` for JavaScript syntax checks. See `README-BUILD.md` for packaging instructions and `docs/ACCEPTANCE-TESTS.md` for manual testing.

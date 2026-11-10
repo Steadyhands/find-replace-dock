@@ -69,7 +69,15 @@
     "saved patterns"
   ],
   "scripts": {
-    "test": "node ../tests/regex.test.js",
+    "test": "node tests/regex.test.js",
     "check": "node --check extension.js && node --check multi.js && node --check regex.js"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Steadyhands/find-replace-dock.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Steadyhands/find-replace-dock/issues"
+  },
+  "homepage": "https://github.com/Steadyhands/find-replace-dock#readme"
 }
