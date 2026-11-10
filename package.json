@@ -1,0 +1,75 @@
+{
+  "name": "find-replace-dock",
+  "displayName": "Find & Replace Dock",
+  "description": "A dockable Find and Replace interface with adjustable text size, saved regex patterns, deliberate replacement controls and clickable line results.",
+  "version": "0.3.9",
+  "publisher": "local-tools",
+  "license": "SEE LICENSE IN LICENSE",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onView:findReplaceDock.panel",
+    "onView:findReplaceDock.results"
+  ],
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "findReplaceDock",
+          "title": "Find & Replace Dock",
+          "icon": "media/search.svg"
+        }
+      ],
+      "panel": [
+        {
+          "id": "findReplaceDockResults",
+          "title": "Find Results",
+          "icon": "media/search.svg"
+        }
+      ]
+    },
+    "views": {
+      "findReplaceDock": [
+        {
+          "id": "findReplaceDock.panel",
+          "name": "Find & Replace Dock",
+          "type": "webview"
+        }
+      ],
+      "findReplaceDockResults": [
+        {
+          "id": "findReplaceDock.results",
+          "name": "Find Results",
+          "type": "webview"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "findReplaceDock.focus",
+        "title": "Find & Replace Dock: Focus Panel"
+      }
+    ]
+  },
+  "icon": "media/icon.png",
+  "keywords": [
+    "find",
+    "replace",
+    "search",
+    "regex",
+    "regular expressions",
+    "search results",
+    "text editing",
+    "accessibility",
+    "saved patterns"
+  ],
+  "scripts": {
+    "test": "node ../tests/regex.test.js",
+    "check": "node --check extension.js && node --check multi.js && node --check regex.js"
+  }
+}
